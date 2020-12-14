@@ -21,7 +21,7 @@ public class UserController {
         return userService.addUser(userName, passWord, emailAddress, headerImage, phoneNumber);
     }
 
-    @PostMapping(value = "user/login")
+    @GetMapping(value = "user/login")
     public Result userLogin(@RequestParam("userName") String userName,
                             @RequestParam("passWord") String passWord) {
         return userService.userLogin(userName, passWord);
